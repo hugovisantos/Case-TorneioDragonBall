@@ -98,13 +98,12 @@ namespace TorneioDragonBall
                         }
                     default:
                         throw new Exception();
-
-                }
-                
+                }                
             }
             var torneio = new Torneio();
             var vencedor = torneio.ExecutarTorneio(listaLutadoresCadastrados);
             Console.WriteLine(vencedor.Nome);
+            Console.ReadKey();
         }
     }
 }

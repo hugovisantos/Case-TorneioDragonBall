@@ -5,6 +5,7 @@
         
         public Lutador LutadorA { get; set; }
         public Lutador LutadorB { get; set; }
+        public Namekuseijins Namekuseijins { get; set; }       
 
         
 
@@ -18,6 +19,10 @@
             {
                 return LutadorB;
             }
+            //if(LutadorA == Namekuseijins && LutadorB == Namekuseijins)
+            //{                   
+            //    return Namekuseijins.AbserverOutroNamekuseijins();
+            //}
 
             var poderDeLutaA = LutadorA.Lutar();
             var poderDeLutaB = LutadorB.Lutar();

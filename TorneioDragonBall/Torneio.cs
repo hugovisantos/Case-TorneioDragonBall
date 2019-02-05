@@ -10,12 +10,11 @@ namespace TorneioDragonBall
 
         public Lutador ExecutarTorneio(List<Lutador> lutadores)
         {
-            
             //Quartas de finais
             List<Lutador> vencedoresDasQuartasDeFinais = new List<Lutador>();
             List<Batalha> quartasDeFinais = new List<Batalha>();
 
-            for (var i = 0; i < lutadores.Count; i += 2)
+            for (var i = 0; i < lutadores.Count / 2; i++)
             {
                 var batalha = new Batalha
                 {
@@ -25,7 +24,7 @@ namespace TorneioDragonBall
 
                 quartasDeFinais.Add(batalha);
             }
-            
+
             foreach (var batalha in quartasDeFinais)
             {
                 var vencedorDaBatalha = batalha.Batalhar();
@@ -36,8 +35,8 @@ namespace TorneioDragonBall
             //Semi Finais
             List<Lutador> vencedoresDasSemiFinais = new List<Lutador>();
             List<Batalha> semiFinais = new List<Batalha>();
-            
-            for (var i = 0; i < vencedoresDasQuartasDeFinais.Count/2; i++)
+
+            for (var i = 0; i < vencedoresDasQuartasDeFinais.Count / 2; i++)
             {
                 var batalha = new Batalha
                 {
@@ -58,7 +57,7 @@ namespace TorneioDragonBall
             Lutador vencedorDoTorneio = default(Lutador);
             List<Batalha> final = new List<Batalha>();
 
-            for (var i = 0; i < vencedoresDasSemiFinais.Count/2; i++)
+            for (var i = 0; i < vencedoresDasSemiFinais.Count / 2; i++)
             {
                 var batalha = new Batalha
                 {
